@@ -1,0 +1,26 @@
+//
+// Created by Nestor Dzadzamia on 06.12.25.
+//
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int i, n, j, x, a[1000005], b[1000005];
+int main() {
+    cin >> n;
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    b[0] = 1;
+    for (i = 1; i < n; i++) {
+        b[i] = 1;
+        for (j = i - 1; j >= 0; j--) {
+            if (a[i] > a[j]) b[i] = max(b[i], b[j] + 1);
+        }
+
+        x = max(x, b[i]);
+    }
+
+    cout << x << endl;
+}
