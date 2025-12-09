@@ -35,4 +35,8 @@ add_executable(Codework
         LIS/LIS_Quadratic_time_complexity.cpp
         LIS/LIS_nlogn.cpp
         Graphs/BFS.cpp
-        Graphs/DFS.cpp)
+        Graphs/DFS.cpp
+        MST/Prim.cpp
+        MST/Kruskal.cpp
+        MST/Topological_Sort.cpp
+        Graphs/Djikstra.cpp)
